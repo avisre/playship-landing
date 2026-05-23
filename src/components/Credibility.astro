@@ -1,0 +1,130 @@
+---
+---
+
+<section class="credibility">
+  <div class="container">
+    <h2>Why me</h2>
+
+    <div class="grid">
+      <div class="left">
+        <p class="body">
+          “Most Play Store submission-as-a-service freelancers haven’t actually been rejected by Google. I have — on my own apps. The Data Safety misalignment that killed stockportfolio.pro’s first submission, the policy gauntlet that suspended an earlier app — those weren’t theory. I learned the system by losing to it twice and winning four times.”
+        </p>
+      </div>
+
+      <aside class="stats">
+        <div class="row">
+          <span class="num mono">4</span>
+          <span class="label">Apps shipped to Google Play</span>
+        </div>
+        <div class="row">
+          <span class="num mono">2</span>
+          <span class="label">Currently in Production</span>
+        </div>
+        <div class="row">
+          <span class="num mono">1</span>
+          <span class="label">Rejection navigated</span>
+        </div>
+        <div class="row">
+          <span class="num mono">1</span>
+          <span class="label">Suspension recovered</span>
+        </div>
+        <p class="note">Play Console screenshot available on request</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+  .credibility {
+    background: var(--bg);
+    padding-block: 96px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: left;
+    margin: 0 0 48px 0;
+    line-height: 1.2;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: 1.5fr 1fr;
+      gap: 64px;
+    }
+  }
+
+  .body {
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .stats {
+    background: var(--soft);
+    border: 0.5px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding-block: 14px;
+    border-bottom: 0.5px solid var(--line);
+  }
+
+  .row:last-of-type {
+    border-bottom: none;
+  }
+
+  .num {
+    font-family: var(--font-mono);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1;
+    min-width: 56px;
+  }
+
+  .label {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .note {
+    margin: 16px 0 0 0;
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  @media (max-width: 1023px) {
+    h2 {
+      font-size: 28px;
+    }
+  }
+</style>
