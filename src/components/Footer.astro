@@ -1,0 +1,99 @@
+---
+---
+
+<footer>
+  <div class="container footer-inner">
+    <div class="left">
+      <div class="line1">PlayShip — by Avi Sreekumar</div>
+      <div class="line2">Built in Trivandrum, India</div>
+    </div>
+    <div class="right">
+      <div class="links">
+        <a href="https://www.stockportfolio.pro" target="_blank" rel="noopener noreferrer">stockportfolio.pro</a>
+        <a href="https://www.linkedin.com/in/avinash-sreekumar-102a92258" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+      <div class="copyright mono">© 2026</div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 0.5px solid var(--line);
+    padding-block: 40px;
+    font-size: 14px;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .left .line1 {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .left .line2 {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .links a {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  .links a:hover {
+    color: var(--ink);
+  }
+
+  .copyright {
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    .footer-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    .right {
+      width: auto;
+    }
+
+    .links {
+      gap: 20px;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
+    .copyright {
+      text-align: right;
+    }
+  }
+</style>
