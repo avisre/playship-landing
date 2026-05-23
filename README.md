@@ -83,7 +83,7 @@ Typography rules:
 The intake form at `src/components/IntakeForm.astro` POSTs directly to FormSubmit, which forwards every submission to `avinashsreekumar007@gmail.com`. No account, no API key, no dashboard — just an email address in the form action.
 
 ```html
-<form action="https://formsubmit.co/avinashsreekumar007@gmail.com" method="POST">
+<form action="https://formsubmit.co/b391c6f131759b7d0723b3185e4e658d" method="POST">
   <input type="hidden" name="_subject" value="New PlayShip intake" />
   <input type="hidden" name="_template" value="table" />
   <input type="hidden" name="_captcha" value="false" />
@@ -92,11 +92,11 @@ The intake form at `src/components/IntakeForm.astro` POSTs directly to FormSubmi
 </form>
 ```
 
-### One-time activation
+The action URL uses FormSubmit's hashed alias rather than the naked email address — this keeps `avinashsreekumar007@gmail.com` out of the page's HTML source, reducing scraper-driven spam. The hash forwards to the original email; to change the destination, generate a new hash by activating a fresh email with FormSubmit.
 
-FormSubmit requires a one-time email confirmation before it starts delivering submissions. An activation email titled **"Activate your form"** (sender: `noreply@formsubmit.co`) gets sent to the inbox on the first submission. Click the **Activate Form** button in that email once. Submissions then deliver immediately.
+### Activation status
 
-If you ever need to change the destination email, update the form action URL and trigger activation again with the new address.
+The form was activated on first submission (May 2026). Submissions deliver immediately, no further setup needed.
 
 ### Hidden field reference
 
