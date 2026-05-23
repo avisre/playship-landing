@@ -78,22 +78,27 @@ Typography rules:
 - Weights `400` and `500` only. Never bold.
 - Headings and body in Geist Sans. Numbers, prices, eyebrows, and buttons in Geist Mono.
 
-## Swap the Formspree endpoint
+## Swap the Web3Forms access key
 
-The intake form at `src/components/IntakeForm.astro` currently POSTs to a placeholder:
+The intake form at `src/components/IntakeForm.astro` POSTs to Web3Forms, which forwards every submission to your email. The form currently uses a placeholder access key:
 
 ```html
-<form action="https://formspree.io/f/PLACEHOLDER" method="POST">
+<input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_PLACEHOLDER" />
 ```
 
-To wire it up:
+To wire it up (30-second flow, free, no real signup):
 
-1. Create a form at https://formspree.io and copy the endpoint (looks like `https://formspree.io/f/abcd1234`).
-2. Replace `PLACEHOLDER` in `IntakeForm.astro`.
-3. Optionally configure Formspree to forward submissions to `avinashsreekumar007@gmail.com`.
-4. Rebuild and redeploy.
+1. Go to https://web3forms.com
+2. Enter `avinashsreekumar007@gmail.com` — Web3Forms sends you a verification email containing your access key (a UUID).
+3. Copy the access key.
+4. Replace `WEB3FORMS_ACCESS_KEY_PLACEHOLDER` in `src/components/IntakeForm.astro` with that key.
+5. Rebuild (`npm run build`) and redeploy.
 
-No JavaScript handler — Formspree handles the redirect natively after a POST.
+After that, every submission arrives in `avinashsreekumar007@gmail.com` as an email with subject `New PlayShip intake` and all form fields in the body.
+
+The form includes a honeypot field (`botcheck`) which Web3Forms uses for spam filtering — leave it in place.
+
+Free tier: 250 submissions/month. If you grow past that, upgrade or switch to a self-hosted backend.
 
 ## Production site URL
 
