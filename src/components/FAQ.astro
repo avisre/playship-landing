@@ -1,0 +1,132 @@
+---
+const faqs = [
+  {
+    q: "Can you guarantee Google approves my app?",
+    a: "No — Google's review is opaque. I guarantee compliant submission. If they reject for something I missed (Data Safety, content rating, etc.), I fix it free. If they reject for a fundamental policy issue with the app itself (gambling without licensing, scraping, etc.), I'll tell you that upfront before we start."
+  },
+  {
+    q: "What if my app gets rejected after you submit?",
+    a: "Express tier includes 1 free revision. Full launch includes 2. If it's a policy issue I should have caught, I keep iterating at no extra cost until it lands."
+  },
+  {
+    q: "Do I need to give you my Play Console password?",
+    a: "No. You add me as a release manager on your Play Console with limited permissions. I never need your password."
+  },
+  {
+    q: "How fast can you start?",
+    a: "Same day if I have capacity. I usually have 1–2 slots open per week. Reply via the form and I'll respond within 12 hours."
+  },
+  {
+    q: "Do you handle iOS App Store too?",
+    a: "Not yet — Android only. Apple is a different beast and I won't pretend expertise I don't have."
+  },
+  {
+    q: "What apps will you decline?",
+    a: "Anything that clearly violates Google Play policy: gambling without proper licensing, fake AI products, scraping or copyright violations, predatory lending without compliance certifications. I'll tell you within an hour of receiving your details if it's a no."
+  }
+];
+---
+
+<section class="faq">
+  <div class="container">
+    <h2>Questions worth answering upfront</h2>
+    <div class="faq-list">
+      {faqs.map((item) => (
+        <details>
+          <summary>
+            <span class="faq-question">{item.q}</span>
+            <span class="faq-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-answer">{item.a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    background: var(--bg);
+    padding-block: 96px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: left;
+    margin: 0 0 48px 0;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  @media (max-width: 640px) {
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  .faq-list {
+    max-width: 760px;
+  }
+
+  details {
+    border-top: 0.5px solid var(--line);
+  }
+
+  details:last-child {
+    border-bottom: 0.5px solid var(--line);
+  }
+
+  summary {
+    list-style: none;
+    padding-block: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    transition: color 150ms ease;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary:hover {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .faq-question {
+    flex: 1;
+  }
+
+  .faq-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--ink);
+    transition: transform 200ms ease;
+  }
+
+  details[open] > summary .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.65;
+    padding-bottom: 20px;
+    max-width: 680px;
+  }
+</style>
