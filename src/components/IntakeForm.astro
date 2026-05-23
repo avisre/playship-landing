@@ -1,0 +1,235 @@
+---
+---
+
+<section id="intake">
+  <div class="container">
+    <h2>Get your app live</h2>
+    <p class="subhead">Tell me about your app. I'll reply within 12 hours.</p>
+
+    <form
+      action="https://formspree.io/f/PLACEHOLDER"
+      method="POST"
+    >
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="field">
+        <label for="app_name">App name</label>
+        <input type="text" id="app_name" name="app_name" required />
+      </div>
+
+      <div class="field">
+        <span class="group-label">Current status</span>
+        <div class="radio-group">
+          <label class="radio">
+            <input type="radio" name="status" value="built" />
+            <span>Built but not yet submitted</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="status" value="closed_testing" />
+            <span>In closed testing</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="status" value="rejected" />
+            <span>Rejected by Google</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="status" value="suspended" />
+            <span>Suspended by Google</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="status" value="other" />
+            <span>Other</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="description">Brief description</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          required
+          placeholder="2–3 sentences about what your app does"
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <span class="group-label">Tier interested in</span>
+        <div class="radio-group">
+          <label class="radio">
+            <input type="radio" name="tier" value="express" />
+            <span>Express ($149)</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="tier" value="full" />
+            <span>Full launch ($399)</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="tier" value="rescue" />
+            <span>Rescue & relaunch ($799)</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="tier" value="unsure" />
+            <span>Not sure yet</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit mono">Send</button>
+    </form>
+
+    <p class="alt-contact">
+      Or email <a href="mailto:avinashsreekumar007@gmail.com">avinashsreekumar007@gmail.com</a> directly
+    </p>
+  </div>
+</section>
+
+<style>
+  #intake {
+    background: var(--soft);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 768px) {
+    #intake {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .subhead {
+    text-align: center;
+    margin: 16px auto 0;
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  form {
+    max-width: 560px;
+    margin-inline: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .field {
+    display: block;
+  }
+
+  .field > label,
+  .field > .group-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 0.5px solid var(--line);
+    background: white;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--ink);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  textarea {
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  textarea::placeholder {
+    color: var(--muted);
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--approved);
+    box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.6;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  .radio input[type="radio"] {
+    accent-color: var(--approved);
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .submit {
+    width: 100%;
+    background: var(--cta);
+    color: white;
+    padding: 14px 24px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 150ms ease;
+  }
+
+  .submit:hover {
+    background: var(--cta-hover);
+  }
+
+  .alt-contact {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .alt-contact a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--line-strong);
+    padding-bottom: 1px;
+  }
+</style>
