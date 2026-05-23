@@ -1,0 +1,91 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "You send the AAB + Play Console access",
+    description: "Add me as a release manager. I never need your password.",
+  },
+  {
+    number: "02",
+    title: "We handle Data Safety, signing, listing, content rating",
+    description: "Every field, configured correctly, the first time.",
+  },
+  {
+    number: "03",
+    title: "You review the live submission",
+    description: "Approve copy, screenshots, store listing before push.",
+  },
+  {
+    number: "04",
+    title: "App ships to Play Store production",
+    description: "From internal testing through production rollout.",
+  },
+];
+---
+
+<section class="process">
+  <div class="container">
+    <h2>How it works</h2>
+    <div class="steps">
+      {
+        steps.map((step) => (
+          <div class="step">
+            <span class="step-number mono">{step.number}</span>
+            <h3>{step.title}</h3>
+            <p class="step-description">{step.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .process {
+    background: var(--soft);
+  }
+
+  h2 {
+    text-align: left;
+    margin: 0 0 48px 0;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .step {
+    display: block;
+  }
+
+  .step-number {
+    display: block;
+    font-family: var(--font-mono);
+    color: var(--approved);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step h3 {
+    color: var(--ink);
+    margin: 0 0 8px 0;
+  }
+
+  .step-description {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>
