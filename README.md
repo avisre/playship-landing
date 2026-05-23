@@ -78,27 +78,36 @@ Typography rules:
 - Weights `400` and `500` only. Never bold.
 - Headings and body in Geist Sans. Numbers, prices, eyebrows, and buttons in Geist Mono.
 
-## Swap the Web3Forms access key
+## Intake form delivery (FormSubmit)
 
-The intake form at `src/components/IntakeForm.astro` POSTs to Web3Forms, which forwards every submission to your email. The form currently uses a placeholder access key:
+The intake form at `src/components/IntakeForm.astro` POSTs directly to FormSubmit, which forwards every submission to `avinashsreekumar007@gmail.com`. No account, no API key, no dashboard — just an email address in the form action.
 
 ```html
-<input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_PLACEHOLDER" />
+<form action="https://formsubmit.co/avinashsreekumar007@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New PlayShip intake" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="text" name="_honey" class="botcheck" ... />
+  ...
+</form>
 ```
 
-To wire it up (30-second flow, free, no real signup):
+### One-time activation
 
-1. Go to https://web3forms.com
-2. Enter `avinashsreekumar007@gmail.com` — Web3Forms sends you a verification email containing your access key (a UUID).
-3. Copy the access key.
-4. Replace `WEB3FORMS_ACCESS_KEY_PLACEHOLDER` in `src/components/IntakeForm.astro` with that key.
-5. Rebuild (`npm run build`) and redeploy.
+FormSubmit requires a one-time email confirmation before it starts delivering submissions. An activation email titled **"Activate your form"** (sender: `noreply@formsubmit.co`) gets sent to the inbox on the first submission. Click the **Activate Form** button in that email once. Submissions then deliver immediately.
 
-After that, every submission arrives in `avinashsreekumar007@gmail.com` as an email with subject `New PlayShip intake` and all form fields in the body.
+If you ever need to change the destination email, update the form action URL and trigger activation again with the new address.
 
-The form includes a honeypot field (`botcheck`) which Web3Forms uses for spam filtering — leave it in place.
+### Hidden field reference
 
-Free tier: 250 submissions/month. If you grow past that, upgrade or switch to a self-hosted backend.
+- `_subject` — email subject line in your inbox
+- `_template=table` — formats the submission as a clean HTML table
+- `_captcha=false` — skips the FormSubmit captcha page (the honeypot below handles spam)
+- `_honey` — invisible honeypot field; bots fill it, real users don't
+
+### Limits
+
+FormSubmit is free with no published submission cap. If volume becomes a concern, switch to a self-hosted backend later.
 
 ## Production site URL
 
