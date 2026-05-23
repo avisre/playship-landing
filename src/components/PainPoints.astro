@@ -1,0 +1,93 @@
+---
+---
+<section class="pain-points">
+  <div class="container">
+    <h2>If any of this sounds familiar...</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Data Safety form keeps rejecting your app</h3>
+        <p>Google's Data Safety questionnaire is where 60% of submissions die. Wrong answers trigger automatic rejection with vague feedback.</p>
+      </article>
+      <article class="card">
+        <h3>Stuck in closed testing for weeks</h3>
+        <p>The 14-day, 20-tester requirement kills momentum. Most indie devs never make it to production rollout.</p>
+      </article>
+      <article class="card">
+        <h3>Suspended without a clear reason</h3>
+        <p>Google's enforcement notices are cryptic. Without policy expertise, your appeal almost always fails.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pain-points {
+    background: var(--bg);
+    padding-block: 100px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: left;
+    margin: 0 0 48px 0;
+    line-height: 1.2;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--soft);
+    border: 0.5px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    transition: border-color 150ms ease, color 150ms ease;
+  }
+
+  .card:hover {
+    border-color: var(--line-strong);
+  }
+
+  .card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .card p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 12px 0 0 0;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pain-points {
+      padding-block: 60px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+</style>
