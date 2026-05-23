@@ -1,0 +1,229 @@
+---
+const tiers = [
+  {
+    name: "Express",
+    price: "$149",
+    subtitle: "2–3 days",
+    description: "You have a working AAB. We submit it.",
+    featured: false,
+    features: [
+      "Signing key + AAB upload",
+      "Store listing fields",
+      "Data Safety form (correctly)",
+      "Content rating",
+      "Internal testing track",
+      "1 revision if rejected",
+    ],
+  },
+  {
+    name: "Full launch",
+    price: "$399",
+    subtitle: "5–7 days",
+    description: "Most clients pick this.",
+    featured: true,
+    features: [
+      "Everything in Express",
+      "ASO-tuned store listing copy",
+      "5 designed screenshots",
+      "Privacy policy hosted",
+      "Closed testing → production",
+      "2 revision rounds",
+    ],
+  },
+  {
+    name: "Rescue & relaunch",
+    price: "$799",
+    subtitle: "7–14 days",
+    description: "App rejected or suspended? I've been there.",
+    featured: false,
+    features: [
+      "Full policy audit",
+      "Violation-specific fixes",
+      "Google Support escalation",
+      "Everything in Full launch",
+      "60-day post-launch support",
+    ],
+  },
+];
+---
+
+<section id="pricing">
+  <div class="container">
+    <h2>Three tiers. Pick what fits.</h2>
+
+    <div class="grid">
+      {tiers.map((tier) => (
+        <article class={`card ${tier.featured ? "card--featured" : ""}`}>
+          {tier.featured && (
+            <span class="badge mono">Most picked</span>
+          )}
+          <h3>{tier.name}</h3>
+          <div class="price mono">{tier.price}</div>
+          <div class="subtitle mono">{tier.subtitle}</div>
+          <p class="description">{tier.description}</p>
+          <hr />
+          <ul class="features">
+            {tier.features.map((feature) => (
+              <li>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7.5L5.5 10L11 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <p class="footnote">
+      Custom scope or volume? <a href="#intake">Get in touch →</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  #pricing {
+    background: var(--bg);
+    padding-block: 96px;
+    color: var(--ink);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: 24px;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 48px 0;
+    text-align: left;
+    letter-spacing: -0.01em;
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background: #ffffff;
+    border: 0.5px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card--featured {
+    border: 2px solid var(--approved);
+  }
+
+  .badge {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--approved);
+    background: var(--approved-soft);
+    padding: 4px 10px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .price {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1;
+    margin-top: 12px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .description {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 12px 0 0 0;
+  }
+
+  hr {
+    border: 0;
+    border-top: 0.5px solid var(--line);
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .features {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--ink);
+    padding-block: 8px;
+  }
+
+  .features li svg {
+    color: var(--approved);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .footnote {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .footnote a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--line-strong);
+    padding-bottom: 1px;
+    transition: border-color 150ms ease;
+  }
+
+  .footnote a:hover {
+    border-bottom-color: var(--ink);
+  }
+</style>
