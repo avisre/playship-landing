@@ -72,8 +72,46 @@ const keywords =
     <meta name="msvalidate.01" content="BING_VERIFICATION_PLACEHOLDER" />
 
     <StructuredData />
+
+    <!-- GoatCounter analytics — privacy-friendly, no cookies, no consent banner.
+         Swap GOATCOUNTER_SUBDOMAIN_PLACEHOLDER with the real subdomain after
+         signing up at https://www.goatcounter.com/signup. See ANALYTICS.md. -->
+    <script
+      data-goatcounter="https://GOATCOUNTER_SUBDOMAIN_PLACEHOLDER.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
   </head>
   <body>
     <slot />
+
+    <!-- GoatCounter custom-event wiring for CTA buttons.
+         Looks for data-gc-event="<path>" and data-gc-title="<title>" attrs and
+         fires a custom event via window.goatcounter.count when the element is
+         activated. ~350 bytes minified, no dependencies. -->
+    <script is:inline>
+      (function () {
+        function fire(el) {
+          if (!window.goatcounter || !window.goatcounter.count) return;
+          var path = el.getAttribute("data-gc-event");
+          if (!path) return;
+          window.goatcounter.count({
+            path: path,
+            title: el.getAttribute("data-gc-title") || path,
+            event: true,
+          });
+        }
+        document.addEventListener("click", function (e) {
+          var t = e.target;
+          while (t && t !== document) {
+            if (t.hasAttribute && t.hasAttribute("data-gc-event")) {
+              fire(t);
+              return;
+            }
+            t = t.parentNode;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -147,6 +147,36 @@ After swapping either token, rebuild and redeploy, then click **Verify** in the 
 
 The OG image at `public/og-image.png` is rasterised from `public/og-image.svg` via `sharp`. To regenerate after editing the SVG, run sharp against the SVG at 1200x630 and overwrite the PNG.
 
+## Analytics (GoatCounter)
+
+The site uses [GoatCounter](https://www.goatcounter.com/) for privacy-friendly, cookieless analytics. No GDPR/CCPA consent banner is required because GoatCounter does not set cookies and does not track users with unique identifiers.
+
+The tracking snippet lives in `src/layouts/Layout.astro` just above `</head>`:
+
+```html
+<script
+  data-goatcounter="https://GOATCOUNTER_SUBDOMAIN_PLACEHOLDER.goatcounter.com/count"
+  async
+  src="https://gc.zgo.at/count.js"
+></script>
+```
+
+### Swap procedure
+
+1. Sign up at <https://www.goatcounter.com/signup> and pick a subdomain (e.g. `playship`).
+2. Replace `GOATCOUNTER_SUBDOMAIN_PLACEHOLDER` in `src/layouts/Layout.astro` with the chosen subdomain.
+3. Rebuild and redeploy. Visit the dashboard at `https://<your-subdomain>.goatcounter.com`.
+
+### Custom CTA events
+
+Buttons marked with `data-gc-event="<path>"` and `data-gc-title="<title>"` fire a GoatCounter custom event on click. Currently wired:
+
+- Hero "Get my app live" → `cta-get-my-app-live`
+- Hero "See pricing" → `cta-see-pricing`
+- Intake form "Send" → `cta-intake-submit`
+
+The event dispatcher is an inline `~350 byte` script at the bottom of `Layout.astro`. The remote `count.js` is async-loaded (~2 KB) and does not block render.
+
 ## Lighthouse scores (mobile, production build)
 
 - Performance: 97
