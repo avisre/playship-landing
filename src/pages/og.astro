@@ -1,0 +1,196 @@
+---
+// Dedicated route used ONLY for generating OG / social-preview screenshots.
+// Not linked from anywhere. Excluded from sitemap. noindex.
+//
+// Regenerate after design changes:
+//   1) npm run build && npm run preview
+//   2) python3 /tmp/screenshot_og.py
+//   3) The generated PNG lands in public/og-image.png (and twitter-card.png, social-square.png)
+//
+// See OG_ASSETS.md.
+import "@fontsource/geist-sans/400.css";
+import "@fontsource/geist-sans/500.css";
+import "@fontsource/geist-mono/400.css";
+import "@fontsource/geist-mono/500.css";
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>PlayShip — Social preview</title>
+  </head>
+  <body class="og-body">
+    <div class="og-frame" id="og-frame">
+      <div class="og-corner-tl">
+        <span class="og-corner-mark">[ shipping ]</span>
+      </div>
+
+      <main class="og-main">
+        <p class="og-eyebrow">GOOGLE PLAY SUBMISSION SERVICE</p>
+        <h1 class="og-title">Your app is built.<br />We get it past Google's review gauntlet.</h1>
+        <p class="og-sub">
+          Submission, policy compliance, and rejection recovery for
+          React Native, Expo, and Android apps. Live in 7 days, or your money back.
+        </p>
+      </main>
+
+      <footer class="og-footer">
+        <div class="og-brand">
+          <span class="og-brand-dot"></span>
+          <span class="og-brand-name">playship.pro</span>
+        </div>
+        <div class="og-stamp">
+          <span class="og-stamp-badge">APPROVED</span>
+          <span class="og-stamp-text">4 apps shipped · 6 months</span>
+        </div>
+      </footer>
+    </div>
+
+    <style is:global>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #2A2A28;
+      }
+
+      .og-body {
+        font-family: var(--font-sans);
+        color: var(--ink);
+      }
+
+      .og-frame {
+        width: 1200px;
+        height: 630px;
+        background: var(--bg);
+        position: relative;
+        overflow: hidden;
+        padding: 64px 72px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        row-gap: 0;
+        box-sizing: border-box;
+      }
+
+
+      /* Subtle grid backdrop */
+      .og-frame::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(to right, rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+        background-size: 48px 48px;
+        pointer-events: none;
+      }
+
+      .og-corner-tl {
+        position: relative;
+        z-index: 1;
+      }
+
+      .og-corner-mark {
+        font-family: var(--font-mono);
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        color: var(--approved);
+        text-transform: uppercase;
+      }
+
+      .og-main {
+        position: relative;
+        z-index: 1;
+        align-self: center;
+      }
+
+      .og-eyebrow {
+        font-family: var(--font-mono);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--approved);
+        margin: 0 0 20px 0;
+      }
+
+      .og-title {
+        font-family: var(--font-sans);
+        font-size: 64px;
+        line-height: 1.05;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+        margin: 0 0 24px 0;
+        max-width: 1000px;
+      }
+
+      .og-sub {
+        font-family: var(--font-sans);
+        font-size: 22px;
+        line-height: 1.4;
+        color: var(--muted);
+        margin: 0;
+        max-width: 880px;
+      }
+
+      .og-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+      }
+
+      .og-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .og-brand-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--cta);
+        display: inline-block;
+      }
+
+      .og-brand-name {
+        font-family: var(--font-mono);
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--ink);
+        letter-spacing: 0.02em;
+      }
+
+      .og-stamp {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .og-stamp-badge {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        background: var(--approved-soft);
+        color: var(--approved);
+        padding: 6px 10px;
+        border-radius: 4px;
+      }
+
+      .og-stamp-text {
+        font-family: var(--font-mono);
+        font-size: 14px;
+        color: var(--muted);
+      }
+    </style>
+  </body>
+</html>

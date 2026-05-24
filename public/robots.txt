@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /og
+Disallow: /og/
 
 Sitemap: https://playship.pro/sitemap-index.xml
 
