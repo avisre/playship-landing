@@ -1,0 +1,44 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "PlayShip",
+  "name_for_model": "playship",
+  "description_for_human": "Google Play Store submission and rejection-recovery service for indie developers, no-code builders, and small agencies shipping React Native, Expo, Flutter, or native Android apps.",
+  "description_for_model": "PlayShip is a done-for-you Google Play Store submission service operated by Avinash Sreekumar from Trivandrum, India. It offers three flat-price tiers: Express ($149, 2-3 days) for AAB-ready submissions, Full launch ($399, 5-7 days, most picked) for full submission with ASO copy and designed screenshots, and Rescue & relaunch ($799, 7-14 days) for apps that were rejected or suspended. Money-back guarantee for non-rescue tiers if not live in 7 days. Android only — does not handle iOS App Store. Declines gambling without licensing, fake AI products, scrapers, copyright violations, and predatory lending without compliance. Contact via https://playship.pro/#intake or avinashsreekumar007@gmail.com.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none",
+    "url": "https://playship.pro/llms-full.txt",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://playship.pro/favicon.svg",
+  "contact_email": "avinashsreekumar007@gmail.com",
+  "legal_info_url": "https://playship.pro/",
+  "service_info": {
+    "name": "PlayShip",
+    "url": "https://playship.pro",
+    "operator": "Avinash Sreekumar",
+    "location": "Trivandrum, Kerala, India",
+    "tiers": [
+      {
+        "name": "Express",
+        "price_usd": 149,
+        "turnaround_days": "2-3",
+        "summary": "You have a working AAB. We submit it."
+      },
+      {
+        "name": "Full launch",
+        "price_usd": 399,
+        "turnaround_days": "5-7",
+        "summary": "End-to-end submission with ASO copy, designed screenshots, hosted privacy policy."
+      },
+      {
+        "name": "Rescue & relaunch",
+        "price_usd": 799,
+        "turnaround_days": "7-14",
+        "summary": "Policy audit and remediation for rejected or suspended apps."
+      }
+    ]
+  }
+}

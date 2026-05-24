@@ -1,0 +1,7 @@
+# security.txt — RFC 9116
+# https://www.rfc-editor.org/rfc/rfc9116.html
+
+Contact: mailto:avinashsreekumar007@gmail.com
+Expires: 2099-12-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://playship.pro/.well-known/security.txt
