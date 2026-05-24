@@ -1,0 +1,28 @@
+/* TEAM */
+Operator: Avinash Sreekumar
+Role: Founder, submission specialist, principal engineer
+Contact: avinashsreekumar007@gmail.com
+Location: Trivandrum, Kerala, India
+Site: https://playship.pro
+
+/* SERVICE */
+Name: PlayShip
+What: Google Play Store submission, ASO, and rejection recovery for
+      React Native, Expo, Flutter, and native Android apps.
+Tiers: Express ($149) / Full launch ($399) / Rescue & relaunch ($799)
+Response time: within 12 hours
+Started: 2025
+
+/* TECHNOLOGY */
+Frontend: Astro 6
+Styling: Tailwind CSS v4
+Fonts: Geist Sans, Geist Mono (Fontsource)
+Hosting: Render (static site)
+Forms: FormSubmit
+Domain registrar: Porkbun
+Analytics: privacy-friendly, no third-party trackers in production HTML
+Source: built by hand, no template
+
+/* THANKS */
+Google Play Developer Program documentation, for the long nights.
+Every indie developer who has ever stared at the Data Safety form.
