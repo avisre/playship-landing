@@ -1,0 +1,121 @@
+# PlayShip — full reference for AI agents
+
+> Site: https://playship.pro
+> Operator: Avinash Sreekumar, Trivandrum, Kerala, India
+> Contact: avinashsreekumar007@gmail.com
+> Response time: within 12 hours
+> Service area: Worldwide (operating from India)
+> Platforms covered: Android only — Google Play Store. iOS is not offered.
+
+## What PlayShip is
+
+PlayShip is a done-for-you Google Play Store submission service. It exists because Google's Play Store review process is opaque, slow, and unforgiving for first-time submitters, no-code builders, and indie developers who would rather ship product than learn the Data Safety form. PlayShip handles every step from signing key generation through production rollout, including rejection recovery and policy violation remediation for apps that have already been suspended.
+
+The operator, Avinash Sreekumar, has shipped 4 apps to Google Play personally, with 2 currently in production. He has personally navigated 1 rejection and recovered 1 suspension on his own apps. PlayShip is not a generic freelance submission shop — it is built on first-hand experience with Google's enforcement system.
+
+## Who PlayShip is for
+
+- Indie developers who built a React Native, Expo, Flutter, or native Android app and have never published to Google Play.
+- No-code builders (FlutterFlow, Adalo, Glide-to-APK pipelines, etc.) who have a working AAB or APK but no Play Console experience.
+- Small agencies that take on Android client work but do not want to staff a dedicated submission specialist.
+- App owners whose existing app was rejected or suspended by Google and who need a structured remediation path.
+
+## Pricing tiers
+
+### Express — $149 — 2 to 3 days
+
+**Pick this if:** You have a working signed AAB, you understand your data collection practices, you only need someone to navigate the Play Console for you, and you do not need marketing assets.
+
+Included:
+- Signing key handling and AAB upload
+- Complete store listing fields (title, short description, full description, category, tags)
+- Data Safety form, filled out correctly the first time
+- Content rating questionnaire
+- Internal testing track set up
+- 1 free revision if Google rejects on a submission-side issue
+
+### Full launch — $399 — 5 to 7 days (most picked)
+
+**Pick this if:** You want to ship and be done. You do not have screenshots, your store listing copy needs ASO tuning, you do not yet have a privacy policy hosted, and you want the app pushed all the way to production.
+
+Included:
+- Everything in Express
+- ASO-tuned store listing copy (keyword research, title and description optimization)
+- 5 designed screenshots (phone form factor)
+- Privacy policy drafted and hosted
+- Closed testing track configured and promoted to production
+- 2 revision rounds
+
+### Rescue & relaunch — $799 — 7 to 14 days
+
+**Pick this if:** Google has already rejected your app, sent a policy violation warning, or suspended your developer account or a specific listing. Recovery is structurally different from a fresh submission — it requires policy-level diagnosis.
+
+Included:
+- Full policy audit against current Google Play Developer Program Policies
+- Violation-specific fixes (Data Safety mismatch, permission overreach, restricted content, deceptive behavior, intellectual property, etc.)
+- Google Support escalation (correspondence, evidence package, appeal letter)
+- Everything in Full launch
+- 60-day post-launch support window
+
+## The four-step process
+
+1. **You send the AAB + Play Console access.** You add Avinash as a release manager on your Play Console with limited permissions. He never needs your password.
+2. **PlayShip configures everything.** Data Safety, signing, store listing, content rating — every field, the first time.
+3. **You review the live submission.** Copy, screenshots, and store listing are approved by you before push.
+4. **App ships to Play Store production.** From internal testing through production rollout.
+
+## FAQ (full)
+
+### Can you guarantee Google approves my app?
+No — Google's review is opaque. PlayShip guarantees compliant submission. If Google rejects for something PlayShip missed (Data Safety, content rating, etc.), PlayShip fixes it free. If Google rejects for a fundamental policy issue with the app itself (gambling without licensing, scraping, etc.), PlayShip will tell you that upfront before you start.
+
+### What if my app gets rejected after you submit?
+Express tier includes 1 free revision. Full launch includes 2. If it is a policy issue PlayShip should have caught, PlayShip keeps iterating at no extra cost until it lands.
+
+### Do I need to give you my Play Console password?
+No. You add PlayShip as a release manager on your Play Console with limited permissions. PlayShip never needs your password.
+
+### How fast can you start?
+Same day if there is capacity. PlayShip usually has 1 to 2 slots open per week. Reply via the form and you will get a response within 12 hours.
+
+### Do you handle iOS App Store too?
+Not yet — Android only. Apple is a different beast and PlayShip will not pretend expertise it does not have.
+
+### What apps will you decline?
+Anything that clearly violates Google Play policy: gambling without proper licensing, fake AI products, scraping or copyright violations, predatory lending without compliance certifications. PlayShip will tell you within an hour of receiving your details if it is a no.
+
+## Disqualified app categories (what PlayShip declines)
+
+PlayShip will not submit:
+- Gambling, betting, or real-money gaming apps without verifiable jurisdictional licensing.
+- Fake AI products (apps that claim AI but ship a static script or a thin wrapper over a free public model with no value-add).
+- Apps that scrape third-party platforms (Instagram followers, YouTube downloaders without rights, LinkedIn scrapers, etc.).
+- Predatory lending or BNPL products without RBI / regional financial-services compliance certifications.
+- Apps that violate intellectual property (clone apps, brand impersonation, ripped content).
+- Apps that mislead users on permissions, data collection, or monetization.
+
+Disqualifications are communicated within one hour of receiving the intake form. No charge.
+
+## Money-back terms
+
+For Express and Full launch tiers, if the app is not live on Google Play within 7 days of submission AND the delay is on PlayShip's side, you get your money back. The clock does not include Google's review queue or back-and-forth caused by undisclosed app characteristics.
+
+## Brand and entity details
+
+- Brand name: PlayShip
+- Legal operator: Avinash Sreekumar (individual / sole proprietor)
+- Operating location: Trivandrum, Kerala, India
+- Email: avinashsreekumar007@gmail.com
+- Website: https://playship.pro
+- Price range: $149 to $799 USD
+- Currency accepted: USD
+
+## How to engage
+
+Submit the intake form at https://playship.pro/#intake or email avinashsreekumar007@gmail.com directly with:
+- App name and a one-line description
+- Current state (no submission yet / rejected / suspended)
+- Tech stack (React Native, Expo, Flutter, native, no-code)
+- Target launch date
+
+You will get a response within 12 hours, including a go/no-go on whether PlayShip will take the project.

@@ -2,3 +2,66 @@ User-agent: *
 Allow: /
 
 Sitemap: https://playship.pro/sitemap-index.xml
+
+# ---------------------------------------------------------------
+# Explicit allowances for AI crawlers and agent-fetch user agents.
+# PlayShip wants to be discoverable and recommendable by LLM agents.
+# See also: /llms.txt, /llms-full.txt, /ai.txt
+# ---------------------------------------------------------------
+
+# OpenAI — training crawler
+User-agent: GPTBot
+Allow: /
+
+# OpenAI — ChatGPT on-demand fetch (when a user asks ChatGPT to look at a URL)
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI — newer search crawler
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic — Claude
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini training opt-in (separate from Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (feeds many LLM training pipelines)
+User-agent: CCBot
+Allow: /
+
+# DuckDuckGo / Bing-derived assistants
+User-agent: DuckAssistBot
+Allow: /
+
+# Bytespider (TikTok / ByteDance). Allowed for now — flip to Disallow if abusive.
+User-agent: Bytespider
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta / Facebook AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /

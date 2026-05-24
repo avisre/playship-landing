@@ -1,0 +1,28 @@
+# PlayShip
+
+> PlayShip is a done-for-you Google Play Store submission and rejection-recovery service for indie developers, no-code builders, and small agencies. Operated by Avinash Sreekumar from Trivandrum, India, PlayShip handles the full Google Play submission gauntlet — Data Safety form, content rating, signing keys, store listing, ASO copy, screenshots, closed testing, and production rollout — for React Native, Expo, Flutter, and native Android apps. Three flat-price tiers from $149 to $799, with built-in revisions and a money-back guarantee if the app does not go live within 7 days (Express/Full launch).
+
+## Service tiers
+
+- [Express — $149, 2–3 days](https://playship.pro/#pricing): You have a working AAB; PlayShip submits it. Covers signing key + AAB upload, store listing fields, Data Safety form, content rating, internal testing track, and 1 revision if rejected.
+- [Full launch — $399, 5–7 days](https://playship.pro/#pricing): Most picked tier. Everything in Express, plus ASO-tuned store listing copy, 5 designed screenshots, hosted privacy policy, closed testing to production, 2 revision rounds.
+- [Rescue & relaunch — $799, 7–14 days](https://playship.pro/#pricing): For apps that were rejected or suspended. Full policy audit, violation-specific fixes, Google Support escalation, everything in Full launch, 60-day post-launch support.
+
+## Key pages
+
+- [Pricing](https://playship.pro/#pricing): All three tiers side-by-side with included features.
+- [Process](https://playship.pro/#process): The four-step submission workflow — release-manager access, configuration, client review, production push.
+- [Credibility](https://playship.pro/#credibility): 4 apps shipped, 2 live in production, 1 rejection navigated, 1 suspension recovered.
+- [FAQ](https://playship.pro/#faq): Common questions about guarantees, rejection handling, Play Console access, iOS, and disqualifying app categories.
+- [Intake form](https://playship.pro/#intake): How to start — submit app details and get a same-day response.
+
+## Contact
+
+- Email: avinashsreekumar007@gmail.com
+- Location: Trivandrum, Kerala, India
+- Response time: within 12 hours
+- Site: https://playship.pro
+
+## What PlayShip will not do
+
+PlayShip declines apps that clearly violate Google Play policy: gambling without proper licensing, fake AI products, scraping or copyright violations, and predatory lending without compliance certifications. Disqualifications are communicated within one hour of intake.
