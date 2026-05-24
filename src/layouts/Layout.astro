@@ -4,6 +4,7 @@ import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-mono/400.css";
 import "@fontsource/geist-mono/500.css";
 import "../styles/global.css";
+import StructuredData from "../components/StructuredData.astro";
 
 interface Props {
   title?: string;
@@ -17,6 +18,8 @@ const {
 
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImage = new URL("/og-image.png", Astro.site).toString();
+const keywords =
+  "google play submission, play store rejection recovery, android app submission service, expo react native play store, data safety form, play console help";
 ---
 
 <!DOCTYPE html>
@@ -28,22 +31,47 @@ const ogImage = new URL("/og-image.png", Astro.site).toString();
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Avinash Sreekumar" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
 
     <meta name="theme-color" content="#FAFAF7" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PlayShip" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PlayShip — Google Play submission service" />
 
-    <meta name="twitter:card" content="summary" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="PlayShip — Google Play submission service" />
+
+    <!-- Search engine verification placeholders.
+         Swap the content value with the real token from each console.
+         See SEO_CHANGES.md for the exact swap steps. -->
+    <meta name="google-site-verification" content="GOOGLE_VERIFICATION_PLACEHOLDER" />
+    <meta name="msvalidate.01" content="BING_VERIFICATION_PLACEHOLDER" />
+
+    <StructuredData />
   </head>
   <body>
     <slot />

@@ -130,6 +130,19 @@ After the first deploy:
 2. Update `public/robots.txt` sitemap URL with the real Render URL.
 3. Rebuild.
 
+## SEO
+
+See `SEO_CHANGES.md` for the full meta-tag and JSON-LD inventory.
+
+Two verification meta tags in `src/layouts/Layout.astro` ship with placeholder values and need real tokens before the consoles will accept them:
+
+- `<meta name="google-site-verification" content="GOOGLE_VERIFICATION_PLACEHOLDER" />` — swap with the token from Google Search Console (URL-prefix property, HTML-tag method).
+- `<meta name="msvalidate.01" content="BING_VERIFICATION_PLACEHOLDER" />` — swap with the key from Bing Webmaster Tools (Meta-tag method), or import directly from Search Console after step 1.
+
+After swapping either token, rebuild and redeploy, then click **Verify** in the corresponding console.
+
+The OG image at `public/og-image.png` is rasterised from `public/og-image.svg` via `sharp`. To regenerate after editing the SVG, see `SEO_CHANGES.md`.
+
 ## Lighthouse scores (mobile, production build)
 
 - Performance: 97
