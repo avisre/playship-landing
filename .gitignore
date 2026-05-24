@@ -29,6 +29,8 @@ pnpm-debug.log*
 *.pem
 credentials.json
 secrets.json
+rendeerkk.txt
+*.local-release-secrets*
 
 # Private agent-generated working files (outreach, leads, venues, strategy)
 # These live locally during the build but must never reach the public repo.
