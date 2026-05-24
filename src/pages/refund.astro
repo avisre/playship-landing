@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Refund & Cancellation Policy — PlayShip"
+  description="When PlayShip refunds, when it doesn't, and how to cancel a submission engagement."
+>
+  <main class="container legal">
+    <p class="eyebrow mono">REFUND & CANCELLATION</p>
+    <h1>Refund &amp; Cancellation Policy</h1>
+    <p class="updated mono">Last updated: 24 May 2026</p>
+
+    <p>
+      PlayShip sells a delivered professional service. The rules below describe
+      when you can cancel and when a refund is due.
+    </p>
+
+    <h2>1. Cancellation by you</h2>
+    <ul>
+      <li><strong>Before work starts:</strong> 100% refund, less any non-recoverable payment processor fees, if you cancel before we have begun work (typically within 24 hours of payment).</li>
+      <li><strong>After work has started but before submission:</strong> 50% refund. The remainder covers time already spent on audit, listing copy, asset preparation, and Play Console configuration.</li>
+      <li><strong>After the build has been submitted to Google Play:</strong> no refund, because the service has been performed.</li>
+    </ul>
+
+    <h2>2. Express tier guarantee</h2>
+    <p>
+      The Express tier carries a "live in 7 days or full refund" guarantee. If
+      your app is not in at least the Internal Testing track within 7 calendar
+      days of us receiving a working AAB, signing key, and Play Console access,
+      you are entitled to a full refund on request.
+    </p>
+    <p>
+      The guarantee does not apply where the delay is caused by Google review
+      times beyond our control, missing or invalid inputs from you, policy
+      violations in the app itself that require code changes, or force majeure.
+    </p>
+
+    <h2>3. Cancellation by us</h2>
+    <p>
+      We may decline or stop work if the app violates Google Play policy,
+      involves illegal content, infringes third-party rights, or if the client
+      becomes uncontactable for more than 14 days. In that case we refund the
+      portion of the fee for work not yet performed.
+    </p>
+
+    <h2>4. How to request a refund</h2>
+    <p>
+      Email <a href="mailto:avinashsreekumar007@gmail.com">avinashsreekumar007@gmail.com</a>
+      with your order reference and the reason for the request. Eligible
+      refunds are issued to the original payment method within 5–10 business
+      days of approval. Stripe and bank settlement times may add a few days.
+    </p>
+
+    <h2>5. Chargebacks</h2>
+    <p>
+      If you have a concern please contact us first. Initiating a chargeback
+      without first allowing us a reasonable opportunity to resolve the issue
+      may delay or void any refund.
+    </p>
+
+    <h2>6. Contact</h2>
+    <p>
+      Avinash Sreekumar · Trivandrum, Kerala, India ·
+      <a href="mailto:avinashsreekumar007@gmail.com">avinashsreekumar007@gmail.com</a>
+    </p>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    max-width: 760px;
+    padding-block: 80px;
+  }
+  .eyebrow {
+    color: var(--approved);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  h1 {
+    margin-top: 16px;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  p, li {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-block: 6px;
+  }
+  a {
+    color: var(--ink);
+    border-bottom: 0.5px solid var(--line-strong);
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom-color: var(--ink);
+  }
+</style>
