@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Terms of Service — PlayShip"
+  description="Terms governing the use of PlayShip, a Google Play submission and rejection-recovery service operated from India."
+>
+  <main class="container legal">
+    <p class="eyebrow mono">TERMS OF SERVICE</p>
+    <h1>Terms of Service</h1>
+    <p class="updated mono">Last updated: 24 May 2026</p>
+
+    <p>
+      These Terms govern your use of the PlayShip website and any submission
+      service you purchase. By engaging the service or paying an invoice you
+      agree to these Terms.
+    </p>
+
+    <h2>1. Who we are</h2>
+    <p>
+      PlayShip is a sole-proprietorship service operated by Avinash Sreekumar,
+      based in Trivandrum, Kerala, India. References to "we", "us", or "PlayShip"
+      mean the proprietor.
+    </p>
+
+    <h2>2. The service</h2>
+    <p>
+      PlayShip helps independent developers submit Android apps to the Google
+      Play Store, complete required compliance fields (Data Safety, content
+      rating, store listing), and recover from policy rejections. Service tiers
+      and inclusions are described on the pricing section of the homepage.
+    </p>
+
+    <h2>3. Eligibility</h2>
+    <p>
+      Service is available to individuals and registered businesses worldwide
+      who legally own or are authorised to publish the Android app being
+      submitted. You must be 18 or older.
+    </p>
+
+    <h2>4. Your responsibilities</h2>
+    <ul>
+      <li>Provide a working AAB or source build, accurate metadata, and timely Play Console release-manager access.</li>
+      <li>Hold all rights, licences, and consents required for the app and its content.</li>
+      <li>Comply with the Google Play Developer Programme Policies. PlayShip configures and submits; final policy compliance is your responsibility as the publisher of record.</li>
+    </ul>
+
+    <h2>5. Turnaround</h2>
+    <p>
+      Stated turnaround times begin once we have received the AAB, signing key
+      details, Play Console access, and complete intake answers. Delays caused
+      by missing inputs extend the timeline.
+    </p>
+
+    <h2>6. Pricing &amp; payment</h2>
+    <p>
+      Prices shown on the site are in GBP or USD as listed and are exclusive of
+      any taxes that may apply in your jurisdiction. Payment is made in advance
+      via Stripe, Wise, or PayPal. Receipts are issued by email.
+    </p>
+
+    <h2>7. Refunds &amp; cancellation</h2>
+    <p>
+      Refund and cancellation rules are set out in the
+      <a href="/refund">Refund &amp; Cancellation Policy</a> and form part of
+      these Terms.
+    </p>
+
+    <h2>8. Intellectual property</h2>
+    <p>
+      You retain ownership of your app and all assets you provide. Deliverables
+      we create for you (store listing copy, screenshots) become yours on full
+      payment. We may reference the engagement in a portfolio listing unless you
+      ask otherwise in writing.
+    </p>
+
+    <h2>9. Limitation of liability</h2>
+    <p>
+      We do not guarantee Google Play approval, ranking, downloads, or revenue.
+      Google may reject or remove apps at its sole discretion. To the maximum
+      extent permitted by law, our aggregate liability for any claim arising out
+      of the service is limited to the amount you paid for that engagement.
+    </p>
+
+    <h2>10. Governing law</h2>
+    <p>
+      These Terms are governed by the laws of India. Courts in Trivandrum,
+      Kerala have exclusive jurisdiction over any dispute.
+    </p>
+
+    <h2>11. Contact</h2>
+    <p>
+      Questions about these Terms:
+      <a href="mailto:avinashsreekumar007@gmail.com">avinashsreekumar007@gmail.com</a>.
+    </p>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    max-width: 760px;
+    padding-block: 80px;
+  }
+  .eyebrow {
+    color: var(--approved);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  h1 {
+    margin-top: 16px;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  p, li {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-block: 6px;
+  }
+  a {
+    color: var(--ink);
+    border-bottom: 0.5px solid var(--line-strong);
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom-color: var(--ink);
+  }
+</style>
