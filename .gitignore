@@ -11,14 +11,63 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
+*.log
 
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
 
 # macOS-specific files
 .DS_Store
 
 # jetbrains setting folder
 .idea/
+
+# credentials and keys (never commit raw secrets)
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# Private agent-generated working files (outreach, leads, venues, strategy)
+# These live locally during the build but must never reach the public repo.
+LEADS_*.md
+VENUES_*.md
+SEO_CHANGES.md
+SEO_SUBMISSION_PLAYBOOK.md
+REPO_HYGIENE.md
+RENDER_AUTODEPLOY_FIX.md
+RENDER_DEPLOY_DEBUG.md
+
+# Private job-search / interview prep files (defence-in-depth — these live in
+# a separate ../JOb folder but block here too in case they get copied in)
+CV_CHANGE_NOTES.md
+CV_HONESTY_FLAGS.md
+BRUSHUP_PLAN.md
+INTERVIEW_DEFENSE.md
+AI_JOBS_INDIA.md
+WEEK1_CHECKLIST.md
+UPWORK_100_PLAN.md
+START_HERE.md
+Avinash_Sreekumar_CV*.md
+Avinash_Sreekumar_CV*.pdf
+application_tracker.csv
+earnings_ledger.csv
+twitter_dm_tracker.csv
+ai_training_applications.md
+arc_profile.md
+contra_profile.md
+toptal_application.md
+wellfound_profile.md
+linkedin_profile.md
+twitter_dm_templates.md
+upwork_proposal_templates.md
+loom_script_*.md
+email_signature.md
+DEMO_ROUTE_CHANGES.md
+
+# Editor / OS junk
+*.swp
+*.swo
+Thumbs.db

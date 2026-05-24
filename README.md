@@ -134,7 +134,7 @@ After the first deploy:
 
 ## SEO
 
-See `SEO_CHANGES.md` for the full meta-tag and JSON-LD inventory.
+Meta tags and four JSON-LD blocks (Service, LocalBusiness, FAQPage, WebSite) are wired into `src/layouts/Layout.astro` and `src/components/StructuredData.astro`.
 
 Two verification meta tags in `src/layouts/Layout.astro` ship with placeholder values and need real tokens before the consoles will accept them:
 
@@ -143,7 +143,7 @@ Two verification meta tags in `src/layouts/Layout.astro` ship with placeholder v
 
 After swapping either token, rebuild and redeploy, then click **Verify** in the corresponding console.
 
-The OG image at `public/og-image.png` is rasterised from `public/og-image.svg` via `sharp`. To regenerate after editing the SVG, see `SEO_CHANGES.md`.
+The OG image at `public/og-image.png` is rasterised from `public/og-image.svg` via `sharp`. To regenerate after editing the SVG, run sharp against the SVG at 1200x630 and overwrite the PNG.
 
 ## Lighthouse scores (mobile, production build)
 
