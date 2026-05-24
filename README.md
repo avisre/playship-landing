@@ -1,5 +1,7 @@
 # PlayShip
 
+![Auto-deploy](https://github.com/avisre/playship-landing/actions/workflows/deploy.yml/badge.svg)
+
 <!-- autodeploy-test: 2026-05-24 -->
 
 Landing page for PlayShip, a Google Play submission service. Static one-pager built with Astro 6, Tailwind v4, and self-hosted Geist fonts.
