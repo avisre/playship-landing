@@ -42,6 +42,8 @@ SEO_SUBMISSION_PLAYBOOK.md
 REPO_HYGIENE.md
 RENDER_AUTODEPLOY_FIX.md
 RENDER_DEPLOY_DEBUG.md
+LAUNCH_DRAFTS.md
+ANALYTICS.md
 
 # Private job-search / interview prep files (defence-in-depth — these live in
 # a separate ../JOb folder but block here too in case they get copied in)
