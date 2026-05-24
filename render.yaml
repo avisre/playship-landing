@@ -4,6 +4,9 @@ services:
     runtime: static
     repo: https://github.com/avisre/playship-landing
     branch: master
+    domains:
+      - playship.pro
+      - www.playship.pro
     buildCommand: npm run build
     staticPublishPath: ./dist
     autoDeploy: true
