@@ -6,6 +6,7 @@ const tiers = [
     subtitle: "2–3 days",
     description: "You have a working AAB. We submit it.",
     featured: false,
+    cta: { href: "#intake", label: "Pay $149 now" },
     features: [
       "Signing key + AAB upload",
       "Store listing fields",
@@ -50,6 +51,7 @@ const tiers = [
 <section id="pricing">
   <div class="container">
     <h2>Three tiers. Pick what fits.</h2>
+    <p class="urgency mono">Taking 3 clients this week.</p>
 
     <div class="grid">
       {tiers.map((tier) => (
@@ -70,6 +72,9 @@ const tiers = [
               </li>
             ))}
           </ul>
+          {tier.cta && (
+            <a class="tier-cta mono" href={tier.cta.href} data-gc-event={`cta-pay-${tier.name.toLowerCase()}`} data-gc-title={`CTA: ${tier.cta.label}`}>{tier.cta.label}</a>
+          )}
         </article>
       ))}
     </div>
@@ -77,6 +82,7 @@ const tiers = [
     <p class="footnote">
       Custom scope or volume? <a href="#intake">Get in touch →</a>
     </p>
+    <p class="footnote-fallback">Payment: Stripe / Wise / PayPal — invoice sent on intake reply.</p>
   </div>
 </section>
 
@@ -101,9 +107,43 @@ const tiers = [
     font-size: 36px;
     font-weight: 500;
     line-height: 1.15;
-    margin: 0 0 48px 0;
+    margin: 0 0 16px 0;
     text-align: left;
     letter-spacing: -0.01em;
+  }
+
+  .urgency {
+    font-size: 13px;
+    color: var(--approved);
+    margin: 0 0 40px 0;
+    text-align: left;
+    letter-spacing: 0.02em;
+  }
+
+  .footnote-fallback {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .tier-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: var(--cta);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: background-color 150ms ease;
+  }
+
+  .tier-cta:hover {
+    background: var(--cta-hover);
   }
 
   @media (max-width: 767px) {
