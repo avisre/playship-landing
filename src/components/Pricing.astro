@@ -73,7 +73,7 @@ const tiers = [
             ))}
           </ul>
           {tier.cta && (
-            <a class="tier-cta mono" href={tier.cta.href} data-gc-event={`cta-pay-${tier.name.toLowerCase()}`} data-gc-title={`CTA: ${tier.cta.label}`}>{tier.cta.label}</a>
+            <a class="tier-cta mono" href={tier.cta.href} data-ga-event={`cta-pay-${tier.name.toLowerCase()}`} data-ga-label={`CTA: ${tier.cta.label}`}>{tier.cta.label}</a>
           )}
         </article>
       ))}
