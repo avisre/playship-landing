@@ -25,6 +25,20 @@ services:
         name: Permissions-Policy
         value: camera=(), microphone=(), geolocation=()
     routes:
+      # Collapse non-trailing-slash duplicates onto the canonical (slash) URL.
+      # Sources are exact paths (they don't match the slash version), so no loop.
+      - type: redirect
+        source: /contact
+        destination: /contact/
+      - type: redirect
+        source: /privacy
+        destination: /privacy/
+      - type: redirect
+        source: /refund
+        destination: /refund/
+      - type: redirect
+        source: /terms
+        destination: /terms/
       - type: rewrite
         source: /sitemap.xml
         destination: /sitemap-index.xml
