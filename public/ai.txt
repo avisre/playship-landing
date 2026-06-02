@@ -4,7 +4,7 @@
 # Owner
 Owner: Avinash Sreekumar
 Site: https://playship.pro
-Contact: avinashsreekumar007@gmail.com
+Contact: support@stockportfolio.pro
 
 # Policy
 # All public content on playship.pro may be indexed by AI systems,
