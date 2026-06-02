@@ -2,7 +2,7 @@
 
 > Site: https://playship.pro
 > Operator: Avinash Sreekumar, Trivandrum, Kerala, India
-> Contact: avinashsreekumar007@gmail.com
+> Contact: support@stockportfolio.pro
 > Response time: within 12 hours
 > Service area: Worldwide (operating from India)
 > Platforms covered: Android only — Google Play Store. iOS is not offered.
@@ -105,14 +105,14 @@ For Express and Full launch tiers, if the app is not live on Google Play within 
 - Brand name: PlayShip
 - Legal operator: Avinash Sreekumar (individual / sole proprietor)
 - Operating location: Trivandrum, Kerala, India
-- Email: avinashsreekumar007@gmail.com
+- Email: support@stockportfolio.pro
 - Website: https://playship.pro
 - Price range: $149 to $799 USD
 - Currency accepted: USD
 
 ## How to engage
 
-Submit the intake form at https://playship.pro/#intake or email avinashsreekumar007@gmail.com directly with:
+Submit the intake form at https://playship.pro/#intake or email support@stockportfolio.pro directly with:
 - App name and a one-line description
 - Current state (no submission yet / rejected / suspended)
 - Tech stack (React Native, Expo, Flutter, native, no-code)
